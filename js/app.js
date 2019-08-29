@@ -41,9 +41,6 @@ function player(){
      this.update = function(dt){
     //
      }
-     this.render = function(){
-        ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-    }
      this.handleInput = function( inputvalue ){
         console.log(inputvalue )
         switch( inputvalue ){
@@ -63,6 +60,8 @@ function player(){
      }
      
 }
+
+player.prototype = Enemy.prototype;
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
